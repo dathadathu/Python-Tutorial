@@ -13,7 +13,7 @@ for i in mycursor:
 """
 
 
-
+"""
 from getpass import getpass
 from mysql.connector import connect, Error
 
@@ -27,7 +27,7 @@ try:
         print(connection)
 except Error as e:
     print(e)
-
+"""
 
 """
 import mysql.connector

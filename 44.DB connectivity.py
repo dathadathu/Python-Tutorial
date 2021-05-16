@@ -1,7 +1,7 @@
 """
 import mysql.connector as mc
 
-mydb = mc.connect(host='localhost', user="root", password='Datha@123')
+mydb = mc.connect(host='localhost',port=3306,  user="root", password='Datha@123')
 
 mycursor = mydb.cursor()
 
@@ -60,9 +60,11 @@ finally:
 """
 
 import mysql.connector
-db_connection = mysql.connector.connect(
-  host="localhost",
-  user="datha",
-  passwd="Datha@123"
-)
-print(db_connection)
+
+db = mysql.connector.connect(option_files='my.conf')
+
+print("Connection ID:", db.connection_id)
+
+print(db)
+
+db.close()
